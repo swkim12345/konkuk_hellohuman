@@ -68,7 +68,8 @@ let config = {
 		},
 		{
 			module: "MMM-GoogleAssistant",
-			position: "fullscreen_above",
+		//	position: "fullscreen_above",
+			position: "top_left",
 			config: {
 				assistantConfig: {
 					lang: "ko-KR",
