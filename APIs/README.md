@@ -16,7 +16,7 @@ py 파일로 변환할 경우 필요 없음
  사진 촬영
 
 # 사용법
-```
+```python
 import from APIs.get_emotion_by_text get_emotion_by_text
 import from APIs.get_emotion_by_image get_emotion_by_image
 
