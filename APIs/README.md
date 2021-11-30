@@ -17,8 +17,8 @@ py 파일로 변환할 경우 필요 없음
 
 # 사용법
 ```python
-import from APIs.get_emotion_by_text get_emotion_by_text
-import from APIs.get_emotion_by_image get_emotion_by_image
+import from APIs.get_emotion_by_text import get_emotion_by_text
+import from APIs.get_emotion_by_image import get_emotion_by_image
 
 result1 = get_emotion_by_text('안녕하세요')
 result2 = get_emotion_by_image() #image file must be located in /APIs.
