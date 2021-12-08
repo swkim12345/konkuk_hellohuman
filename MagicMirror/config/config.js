@@ -66,6 +66,7 @@ let config = {
 				]
 			}
 		},
+/*
 		{
 			module: "MMM-GoogleAssistant",
 		//	position: "fullscreen_above",
@@ -82,6 +83,7 @@ let config = {
 				},
 			}
 		},
+*/
 		{
 			module: "compliments",
 			position: "lower_third"
