@@ -25,5 +25,6 @@ result2 = get_emotion_by_image() #image file must be located in /APIs.
 print(result1)
 print(result2)
 ```
-12/08 .py로 변환한 모듈들을 py_modules 폴더에 올려두었습니다.
+12/08 
+.py로 변환한 모듈들을 py_modules 폴더에 올려두었습니다.
 
