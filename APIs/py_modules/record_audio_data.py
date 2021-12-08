@@ -46,10 +46,8 @@ def record_for_seconds(seconds):
     time.sleep(5)
     stop_recording()
     
-record_for_seconds(5)
 
 
-# In[ ]:
 
 
 

@@ -39,19 +39,8 @@ def get_emotion_by_text(text):
     # print(requests.Request('POST', emotion_recognition_url, headers = headers, files = {"config" : (None, body)}).prepare().headers)
     # print(requests.Request('POST', emotion_recognition_url, headers = headers, files = {"config" : (None, body)}).prepare().body)
 
-    print(res)
-    print(res.text)
+    print(res.json()['results']['uni_modal']['text']['result'])
     return (res.json()['results']['uni_modal']['text']['result'])
-
-
-# In[8]:
-
-
-print(token[1])
-
-
-# In[ ]:
-
 
 
 

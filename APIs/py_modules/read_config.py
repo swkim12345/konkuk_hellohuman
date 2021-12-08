@@ -28,8 +28,6 @@ def read_all_data():
 pprint(read_all_data())
 
 
-# In[ ]:
-
 
 
 

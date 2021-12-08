@@ -12,59 +12,42 @@ import import_ipynb
 from read_config import *
 from get_token import get_token
 
-token = get_token()
-data_sample =json.dumps({
-  "type": "SYNTHESIS",
-  "input": {
-    "text": "안녕하십니까 국민여러분 이곳은 대한",
-    "type": "Plain Text"
-  },
-  "voiceConfig": {
-    "speaker": "Female1",
-    "speed": "Medium",
-    "languageCode": "ko_KR",
-    "effect": "None",
-    "volume": "Volume 4",
-    "pitch": "Normal"
-  },
-  "audioConfig": {
-    "encoding": "MP3"
-  },
-  "additionalConfig": {
-    "privacy": "yes"
+def text_to_speech(text):
+  token = get_token()
+  data_sample =json.dumps({
+    "type": "SYNTHESIS",
+    "input": {
+      "text": text,
+      "type": "Plain Text"
+    },
+    "voiceConfig": {
+      "speaker": "Female1",
+      "speed": "Medium",
+      "languageCode": "ko_KR",
+      "effect": "None",
+      "volume": "Volume 4",
+      "pitch": "Normal"
+    },
+    "audioConfig": {
+      "encoding": "MP3"
+    },
+    "additionalConfig": {
+      "privacy": "yes"
+    }
+  }, sort_keys=False)
+
+  rest_api_key = read_rest_api_key()
+  headers = {
+      "Content-Type": 'application/json',
+      "x-api-key": rest_api_key,
+      "Authorization": token
   }
-}, sort_keys=False)
+  URL = 'https://korea.api.lgthinqai.net:443/voice/tts/v1/synthesis'
+  voice_parse = requests.post(URL, headers = headers, data=data_sample)
 
-rest_api_key = read_rest_api_key()
-headers = {
-    "Content-Type": 'application/json',
-    "x-api-key": rest_api_key,
-    "Authorization": token
-}
-URL = 'https://korea.api.lgthinqai.net:443/voice/tts/v1/synthesis'
-print(data_sample)
-voice_parse = requests.post(URL, headers = headers, data=data_sample)
+  mp3_file = voice_parse.content
 
-mp3_file = voice_parse.content
-
-with open("mp3_file.mp3", "wb") as f:
-    f.write(mp3_file)
-
-
-# In[3]:
-
-
-print(voice_parse)
-
-
-# In[2]:
-
-
-
-
-
-# In[ ]:
-
-
+  with open("mp3_file.mp3", "wb") as f:
+      f.write(mp3_file)
 
 

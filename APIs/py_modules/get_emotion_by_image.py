@@ -50,13 +50,10 @@ def get_emotion_by_image():
     # print(requests.Request('POST', emotion_recognition_url, headers = headers, files = {"config" : (None, body)}).prepare().body)
 
     #print(res)
-    print(res.text)
+    print(res.json()['results']['uni_modal']['image']['result'])
     
     return res.json()['results']['uni_modal']['image']['result']
-get_emotion_by_image()
 
-
-# In[ ]:
 
 
 
