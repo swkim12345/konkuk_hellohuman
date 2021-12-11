@@ -28,6 +28,7 @@ cv2.destroyAllWindows()
 print("time :", time.time() - start)  # 현재시각 - 시작시간 = 실행 시간
 
 
+'''
 # In[7]:
 
 
@@ -44,6 +45,6 @@ camera.stop_preview()
 
 # In[ ]:
 
-
+'''
 
 
