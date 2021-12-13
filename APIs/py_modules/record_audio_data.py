@@ -22,10 +22,10 @@ def complicated_record():
         with sd.InputStream(samplerate=16000, dtype='int16', channels=1, callback=complicated_save):
             while recording:
                 file.write(q.get())
-        
+
 def complicated_save(indata, frames, time, status):
     q.put(indata.copy())
-    
+
 def start_recording():
     global recorder
     global recording
@@ -33,19 +33,19 @@ def start_recording():
     recorder = threading.Thread(target=complicated_record)
     print('start recording')
     recorder.start()
-    
+
 def stop_recording():
     global recorder
     global recording
     recording = False
     recorder.join()
     print('stop recording')
-    
+
 def record_for_seconds(seconds):
     start_recording()
-    time.sleep(5)
+    time.sleep(seconds)
     stop_recording()
-    
+
 
 
 
