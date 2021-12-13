@@ -50,4 +50,3 @@ def text_to_speech(text):
   with open("mp3_file.mp3", "wb") as f:
       f.write(mp3_file)
 
-text_to_speech('네~')

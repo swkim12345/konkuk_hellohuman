@@ -31,6 +31,6 @@ def take_new_image():
 
 # In[ ]:
 
-
+'''
 
 
