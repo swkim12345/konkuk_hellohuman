@@ -29,7 +29,7 @@ def get_emotion_by_image():
                 {
                     "id": "0",
                     "format": "jpg",
-                    "roi": {## position of face frame. 
+                    "roi": {## position of face frame.
                         "x1": 113,
                         "y1": 141,
                         "x2": 40,
@@ -50,8 +50,8 @@ def get_emotion_by_image():
     # print(requests.Request('POST', emotion_recognition_url, headers = headers, files = {"config" : (None, body)}).prepare().body)
 
     #print(res)
-    print(res.json()['results']['uni_modal']['image']['result'])
-    
+    #print(res.json()['results']['uni_modal']['image']['result'])
+
     return res.json()['results']['uni_modal']['image']['result']
 
 

@@ -24,9 +24,9 @@ def get_emotion_by_text(text):
     }
     body = json.dumps({
         "type": "EMOTION_RECOGNITION",
-        "input": { 
-            "type": 'text', 
-            "text": text 
+        "input": {
+            "type": 'text',
+            "text": text
         }
     }, ensure_ascii=False)   # 2. 삭제된 Content-Type의 UTF-8 대신 직접 UTF-8 보장 (필수 아님)
 
@@ -44,3 +44,5 @@ def get_emotion_by_text(text):
 
 
 
+
+# %%

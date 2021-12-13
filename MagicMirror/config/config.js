@@ -66,6 +66,9 @@ let config = {
 				]
 			}
 		},
+		{
+			module: "MMM-Python",
+		},
 /*
 		{
 			module: "MMM-GoogleAssistant",
