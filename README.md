@@ -10,3 +10,7 @@
 ## 개발방법
 - LG전자에서 제공하는 [Cloud API](https://thinq.developer.lge.com/ko/)를 사용해 사용자의 감정, 나이, 성별을 json파일로 받는다.
 
+## 구체적인 개발방법 
+Notion 
+
+https://boiling-cairnsmore-26d.notion.site/Mirrormoji-c858880f611748fe91ef0d945e6ef145
